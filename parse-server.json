@@ -1,0 +1,29 @@
+{
+  apps : [{
+    name : 'parse',
+    instances: 6,
+    exec_mode: 'cluster',
+    script : '/home/user/parse-server/index.js',
+    watch : false,
+    cwd : '/home/user/parse-server',
+    env: {
+      DATABASE_URI: 'mongodb://localhost:27017/test',
+      APP_NAME: 'app_name',
+      APP_ID: 'app_id',
+      MASTER_KEY: 'master_key',
+      MAIL_SERVICE: '163',
+      MAIL_EMAIL: 'nobody@163.com',
+      MAIL_FROM: 'Parse Admin<nobody@163.com>',
+      MAIL_PASSWORD: 'password',
+      PARSE_MOUNT: '/hb',
+      DASH_MOUNT: '/dash',
+      SERVER_URL: 'https://yourdomain.com',
+      SERVER_PORT: '3001',
+      DASH_USER: 'user',
+      DASH_PASSWORD: 'encrypted_password',
+      COOKIE: 'your_secret_here',
+      SSL_KEY: './certs/site-key.pem',
+      SSL_CER: './certs/site-mix.pem'
+    }
+  }]
+}
